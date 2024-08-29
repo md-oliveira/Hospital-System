@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor01: #094b59; /*#013440*/ 
+    --cor02: #53A688; /*#226473*/
+    --corfundo: #D6F1EA;
+    --branco: #F2F2F2; /**/
+
+    --fonte: "Poppins", sans-serif;
+}
+
+
+
+/* Conteúdo da página */
+#content {
+    padding: 20px;
+}
+
+
+body {
+    /* Cor do fundo */
+    margin: 0;
+    font-family: var(--fonte);
+    background-color: var(--corfundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    /* Cor tela de login */
+    background: var(--branco);
+    color: var(--cor01);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.200);
+    display: flex;
+    align-items: center;
+}
+
+.container a {
+    font-family: var(--fonte);
+    text-decoration: underline;
+}
+
+.container a:hover {
+    color: var(--cor02);
+}
+
+.left {
+    /* Cor texto esquerdo */
+    color: white;
+    padding-right: 20px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.left h1 {
+    /* Linha de baixo do texto life */
+    margin: 0;
+    font-size: 4em;
+    font-weight: bold;
+    border-bottom: 1px solid #2A8C4C;
+    padding-bottom: 1px;
+    font-family: 'Georgia', 'Times', 'serif';
+}
+
+.left h1, p {
+    font-family: var(--fonte);
+    color: var(--cor02);
+}
+
+.left p {
+    /* Espaço do texto esquerdo da tela de login */
+    font-size: 1.3em;
+}
+
+.right {
+    /* Tamanho da tela de login e outros da mesma */
+    margin: 68px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.right h2 {
+    /* Texto bem-vindo */
+    /* Cor e fonte e mais */
+    margin: 0;
+    margin-bottom: 0px;
+    /* color: white; */
+    font-size: 4.0em;
+    /* font-family: 'Georgia', 'Times', 'serif'; */
+    font-family: var(--fonte);
+    color: var(--cor02);
+}
+
+.right input {
+    /* Visual dos campos de entrada (inputs) */
+    display: block;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.right input[type="text"],
+.right input[type="password"] {
+    background-color: #e9ecef;
+}
+
+.right input[type="submit"] {
+    background-color: var(--cor02);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 370px; /* Tamanho do botão */
+    font-family: var(--fonte);
+    transition: transform 0.3s ease; /* Animação de transição */
+}
+
+.right input[type="submit"]:hover {
+    background-color: var(--cor01); /* trem do cursor */
+    transform: scale(1.05); /* Efeito de aumento ao passar o cursor */
+}
+
+.right a {
+    display: block;
+    color: var(--cor01);
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: var(--fonte);
+}
+
+.right a:hover {
+    text-decoration: underline;
+}
+
+/*trem do celular la */
+@media screen and (max-width: 800px)
+{
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .left h1 {
+        font-size: 2.5em;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .right h2 {
+        font-size: 2.5em;
+    }
+
+    .right input[type="submit"] {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor01: #094b59; /*#013440*/
+    --cor02: #53A688; /*#226473*/
+    --corfundo: #D6F1EA;
+    --branco: #F2F2F2; /**/
+
+    --fonte: "Poppins", sans-serif;
+}
+
+body {
+    /* Cor do fundo */
+    margin: 0;
+    font-family: var(--fonte);
+    background: var(--corfundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    /* Cor tela de login */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.151);
+    display: flex;
+    align-items: center;
+}
+
+.conteudo {
+    /* Tamanho da tela de login e outros da mesma */
+    margin: 68px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.conteudo h2 {
+    /* Texto bem-vindo */
+    /* Cor e fonte e mais */
+    margin: 0;
+    margin-bottom: 0px;
+    color: var(--cor02);
+    font-size: 4.0em;
+    font-family: var(--fonte);
+}
+
+.conteudo h3{
+    color: var(--cor02);
+    padding: 10px;
+}
+
+.conteudo input {
+    /* Visual dos campos de entrada (inputs) */
+    display: block;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.conteudo input[type="text"],
+.conteudo input[type="password"],
+.conteudo input[type="email"],
+.conteudo input[type="textarea"] {
+    background-color: var(--branco);
+}
+
+.conteudo input[type="submit"] {
+    background-color: var(--cor01);
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
+    width: 400px; /* Tamanho do botão */
+    font-family: var(--fonte);
+    transition: transform 0.3s ease; /* Animação de transição */
+}
+
+.conteudo input[type="submit"]:hover {
+    background-color: var(--cor02); /* trem do cursor */
+    transform: scale(1.05); /* Efeito de aumento ao passar o cursor */
+}
+
+.conteudo textarea {
+    /* Estilo da textarea */
+    display: block;
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ocorrido{
+    width: 300px; 
+    height: 50px;
+    }
+
+.conteudo a {
+    display: block;
+    color: var(--cor01);
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: var(--fonte);
+}
+
+.conteudo a:hover {
+    text-decoration: underline;
+    color: var(--cor02);
+}
+
+/*trem do celular la */
+@media screen and (max-width: 800px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .conteudo {
+        margin: 0;
+    }
+
+    .conteudo h2 {
+        font-size: 2.5em;
+    }
+
+    .conteudo input[type="submit"] {
+        width: 100%;
+        max-width: 100%;
+    }
+}

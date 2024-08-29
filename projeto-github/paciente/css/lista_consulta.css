@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        html {
+            height: 100%;
+        }
+
+        :root {
+            --cor01: #2A8C4C; /*#013440*/
+            --cor02: #80BF96; /*#226473*/
+            --corfundo: #B0D9BE;
+            --branco: #F2F2F2; /**/
+
+            --fonte: "Poppins", sans-serif;
+        }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--corfundo); 
+    color: #333333;
+    padding: 20px;
+}
+
+.Art1 {
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    max-width: 50%; 
+    margin: 0 auto; 
+    border-radius: 15px;
+}
+
+.Art2 {
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    max-width: 50%; 
+    margin: 0 auto; 
+    border-radius: 15px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.Art1, .Art2 {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Art2 {
+    margin-top: 20px;
+}
+
+button, a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #12591D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover, a:hover {
+    background-color: #19401F;
+}
+
+.card { 
+    /* font-family: 'Georgia', 'Times', 'serif'; */
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card a {
+    background-color: var(--cor01);
+    font-weight: 600;
+    width: 100px;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* font-family: 'Georgia', 'Times', 'serif'; */
+}
+
+.card a:hover{
+    background-color: var(--cor02);
+}
